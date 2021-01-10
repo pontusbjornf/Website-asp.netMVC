@@ -1,0 +1,104 @@
+﻿@model LogginSystem.Models.ContactForm
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<img src="~/2.jpg" alt="Sample Photo" />
+<div class="container2 container fade-in">
+    <form class="from1 " asp-action="Add">
+        <h1>Kontakta oss</h1>
+
+        <label type="text">Förnamn</label>
+        <span asp-validation-for="Fname" class="text-dark"></span>
+        <input asp-for="Fname" placeholder="Förnamn...">
+
+
+        <label for="lname">Efternamn</label>
+        <span asp-validation-for="Lname" class="text-dark"></span>
+        <input asp-for="Lname"placeholder="Efternamn...">
+
+        <label for="email">Email</label>
+        <span asp-validation-for="Email" class="text-dark"></span>
+        <input asp-for="Email"placeholder="Email...">
+
+        <label for="tele">Telefon</label>
+        <span asp-validation-for="Number" class="text-dark"></span>
+        <input asp-for="Number"placeholder="Telefon...">
+
+        <label for="subject">Meddelande</label>
+        <span asp-validation-for="Message" class="text-dark"></span>
+        <textarea asp-for="Message"placeholder="Skriv ditt meddelande här...." style="height:200px"></textarea>
+
+        <button class="button" type="submit" value="Add">Kontakta oss</button>
+
+    </form>
+</div>
+<div class="row mx-auto fade-in">
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Male.jpg" alt="" style="width:100%">
+            <div class=" container1">
+                <h2>Pontus Björnfot</h2>
+                <p class="title">CEO &amp; Founder</p>
+                <p>Information kommer snart..</p>
+                <p>Pontus.Bjornfot@outlook.com</p>
+                <p><a class="button mailto" href="mailto:info@ContinueConsulting.com"><i class="far fa-envelope"></i></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Male.jpg" alt="" style="width:100%">
+            <div class=" container1">
+                <h2>Pontus Björnfot</h2>
+                <p class="title">CEO &amp; Founder</p>
+                <p>Information kommer snart..</p>
+                <p>Pontus.Bjornfot@outlook.com</p>
+                <p><a class="button mailto" href="mailto:info@ContinueConsulting.com"><i class="far fa-envelope"></i></a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="~/Male.jpg" alt="" style="width:100%">
+            <div class=" container1">
+                <h2>Pontus Björnfot</h2>
+                <p class="title">CEO &amp; Founder</p>
+                <p>Information kommer snart..</p>
+                <p>Pontus.Bjornfot@outlook.com</p>
+                <p><a class="button mailto" href="mailto:info@ContinueConsulting.com"><i class="far fa-envelope"></i></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="action_page.php" class="container4 form2 fade-in">
+    <div class="container container3">
+        <h2>Nyhetsbrev</h2>
+        <p>Information, tips och trix om det senaste uppdateringarna</p>
+    </div>
+
+    <div class="container container3" style="background-color:white">
+        <input type="text" placeholder="Namn" name="name" required>
+        <input type="text" placeholder="Email" name="mail" required>
+        <label>
+            <input type="checkbox" checked="checked" name="subscribe"> Nyhetsbrev
+        </label>
+    </div>
+    <div class="container container3">
+        <button class="button" type="submit" value="Prenumerera">Prenumerera</button>
+        
+    </div>
+</form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<script src="~/js/JavaScript.js">
+</script>

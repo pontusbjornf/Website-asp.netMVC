@@ -1,0 +1,62 @@
+﻿@model LogginSystem.Models.User 
+
+
+<link rel="stylesheet" href="~/css/StyleSheetSign.css" />
+<h2>Välkommen</h2>
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form method="post" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h1>Skapa ett nytt kontot</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span></span>
+            <input asp-for="Fname" type="text" placeholder="Förnamn" />
+            <span  asp-validation-for="Fname" class="text-dark"></span>
+            <input asp-for="Lname" type="text" placeholder="Efternamn" />
+            <span asp-validation-for="Lname" class="text-dark"></span>
+            <input asp-for="Email" type="email" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-dark"></span>
+            <input asp-for="Password" type="password" placeholder="Lösenord" />
+            <span asp-validation-for="Password" class="text-dark"></span>
+            <button type="submit" value="Create">Skapa konto</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form method="post" asp-action="Loggin">
+            <h1>Logga in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span></span>
+            <input asp-for="Email" type="email" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-dark"></span>
+            <input asp-for="Password" type="password" placeholder="Lösenord" />
+            <span asp-validation-for="Password" class="text-dark"></span>
+            <a href="#">Glömt ditt lösenord?</a>
+            <button type="submit" value="Loggin">Logga in</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Välkommen!</h1>
+                <p>Logga in på ditt koto här</p>
+                <button class="ghost" id="signIn">Logga in</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hej!</h1>
+                <p>Skriv in din information för att skapa ett nytt konto</p>
+                <button class="ghost" id="signUp">Skapa konto</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js">
+</script>

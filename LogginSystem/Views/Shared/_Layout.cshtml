@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Loggin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="/fontawsome/css/all.css" />
+</head>
+
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="topnav" id="myTopnav">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="active">Continue Consulting <i class="fas fa-code"></i></a>
+       
+            <a asp-area="" asp-controller="User" asp-action="Index">Logga in <i class="fas fa-sign-in-alt"></i></a>
+            <a asp-controller="ContactForm" asp-action="Index">Lediga jobb <i class="fas fa-users"></i></a>
+
+            <a href="#contact">Kontakt <i class="far fa-envelope"></i></a>
+            <a href="#about">Om oss <i class="fas fa-user"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        @*<img class="cover" src="~/2.jpg" />*@
+    </header>
+
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div >
+            &copy; 2021 - Loggin - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+ 
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
